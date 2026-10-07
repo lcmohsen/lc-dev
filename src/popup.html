@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LC Dev</title>
+    <style>
+      body {
+        font: 13px/1.4 system-ui, sans-serif;
+        margin: 0;
+        width: 320px;
+        color: #1a1a1a;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 12px 0;
+      }
+      h1 {
+        font-size: 14px;
+        margin: 0;
+      }
+      button.link {
+        background: none;
+        border: 0;
+        color: #0b57d0;
+        cursor: pointer;
+        padding: 0;
+      }
+      ul.actions {
+        list-style: none;
+        margin: 8px 0;
+        padding: 0;
+      }
+      ul.actions button {
+        width: 100%;
+        text-align: left;
+        border: 0;
+        background: transparent;
+        padding: 8px 12px;
+        cursor: pointer;
+        font: inherit;
+      }
+      ul.actions button:hover,
+      ul.actions button[aria-pressed="true"] {
+        background: #f2f2f2;
+      }
+      form {
+        display: none;
+        padding: 0 12px 12px;
+      }
+      form.open {
+        display: block;
+      }
+      label {
+        display: block;
+        margin-bottom: 4px;
+      }
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        font: inherit;
+      }
+      .row {
+        margin-top: 8px;
+      }
+      .row button,
+      ul.results button {
+        font: inherit;
+        cursor: pointer;
+      }
+      #msg {
+        margin: 0;
+        padding: 0 12px 12px;
+      }
+      #msg.error {
+        color: #9a3412;
+      }
+      ul.results {
+        list-style: none;
+        margin: 0;
+        padding: 0 12px 12px;
+      }
+      ul.results button {
+        width: 100%;
+        text-align: left;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>LC Dev</h1>
+      <button class="link" id="options" type="button">Token</button>
+    </header>
+    <ul class="actions" id="actions"></ul>
+    <form id="form">
+      <label id="hint" for="input"></label>
+      <input id="input" autocomplete="off" />
+      <div class="row">
+        <button type="submit">Go</button>
+      </div>
+    </form>
+    <p id="msg" hidden></p>
+    <ul class="results" id="results"></ul>
+    <script src="actions.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
